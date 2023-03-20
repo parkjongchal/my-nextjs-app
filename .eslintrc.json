@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["./node_modules/gts/", "next/core-web-vitals"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
