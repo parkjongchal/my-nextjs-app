@@ -3,18 +3,11 @@ import MuiAppBar from '@mui/material/AppBar';
 import React, {FC} from 'react';
 import Typography from '@mui/material/Typography';
 import Sign from './Sign';
-import {styled} from '@mui/material';
 
-const Toolbar = styled(MuiToolbar)(() => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  paddingX: 40,
-  disableGutters: true,
-}));
 const AppBar: FC<React.PropsWithChildren> = () => {
   return (
     <MuiAppBar position="fixed">
-      <Toolbar>
+      <MuiToolbar>
         <Typography
           alignSelf="center"
           fontWeight="semiBold"
@@ -25,7 +18,7 @@ const AppBar: FC<React.PropsWithChildren> = () => {
           My NextJs Study Room
         </Typography>
         <Sign />
-      </Toolbar>
+      </MuiToolbar>
     </MuiAppBar>
   );
 };
