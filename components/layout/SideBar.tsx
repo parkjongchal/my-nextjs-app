@@ -13,13 +13,22 @@ const SideBar: FC<React.PropsWithChildren> = () => {
       <Offset />
       <List disablePadding>
         <MenuItem href="/" title="Home" />
-        <MenuItem title="One Depth">
+        <MenuItem title="First One Depth">
           <Collapse
-            in={collapseMenus['One Depth'] ?? false}
+            in={collapseMenus['First One Depth'] ?? false}
             timeout="auto"
             unmountOnExit
           >
-            <MenuItem href="/" title="Two Depth" isSubMenu />
+            <MenuItem href="/first" title="First Two Depth" isSubMenu />
+          </Collapse>
+        </MenuItem>
+        <MenuItem title="Second One Depth">
+          <Collapse
+            in={collapseMenus['Second One Depth'] ?? false}
+            timeout="auto"
+            unmountOnExit
+          >
+            <MenuItem href="/second" title="Second Two Depth" isSubMenu />
           </Collapse>
         </MenuItem>
       </List>

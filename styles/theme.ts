@@ -77,14 +77,14 @@ const theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         root: ({theme}) => ({
-          width: 200,
+          width: 240,
           flexShrink: 0,
           whiteSpace: 'nowrap',
           boxSizing: 'border-box',
           paddingTop: 20,
           '& .MuiDrawer-paper': {
-            drawerWidth: 200,
-            width: 200,
+            drawerWidth: 240,
+            width: 240,
             paddingTop: 20,
             zIndex: theme.zIndex.appBar - 1,
           },

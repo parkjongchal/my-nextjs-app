@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
-import {Avatar, IconButton, Stack} from '@mui/material';
+import {Avatar, Box, IconButton, Stack} from '@mui/material';
 import {useSession, signIn, signOut} from 'next-auth/react';
 import {Login, Logout} from '@mui/icons-material';
+import NextLink from '@/components/common/NextLink';
 
 const Sign: FC<React.PropsWithChildren> = () => {
   const {data: session} = useSession();
@@ -20,7 +21,13 @@ const Sign: FC<React.PropsWithChildren> = () => {
   };
   return (
     <Stack direction="row">
-      {session && <Avatar {...stringAvatar(session?.user?.name ?? '')} />}
+      {session && (
+        <Box alignSelf="center">
+          <NextLink href="me">
+            <Avatar {...stringAvatar(session?.user?.name ?? '')} />
+          </NextLink>
+        </Box>
+      )}
       <IconButton onClick={() => (session ? signOut() : signIn())}>
         {session ? (
           <Logout fontSize="large" sx={{color: '#FFFFFF'}} />

@@ -72,7 +72,7 @@ interface Props {
   data: Data;
 }
 
-const Hasura: FC<Props> = ({limit, page, data}: Props) => {
+const Hasura: FC<Props> = ({limit, page, data}) => {
   console.log(limit, page);
   return <Box>{data.profiles[0].email}</Box>;
 };

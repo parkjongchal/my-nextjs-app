@@ -1,4 +1,9 @@
-import {ListItemText, Typography, Box, ListItemButton} from '@mui/material';
+import {
+  ListItemText,
+  Typography,
+  ListItemButton,
+  IconButton,
+} from '@mui/material';
 import {styled} from '@mui/material/styles';
 import {useRouter} from 'next/router';
 import React, {FC} from 'react';
@@ -40,7 +45,7 @@ const MenuItem: FC<React.PropsWithChildren<MenuItemProps>> = ({
         backgroundColor: theme.palette.grey.A200,
       }),
     '&:hover': {
-      backgroundColor: theme.palette.primary.light,
+      backgroundColor: theme.palette.grey['300'],
     },
   }));
 
@@ -58,7 +63,7 @@ const MenuItem: FC<React.PropsWithChildren<MenuItemProps>> = ({
           }
         />
         {!href && (
-          <Box color="#666666">{open ? <ExpandLess /> : <ExpandMore />}</Box>
+          <IconButton>{open ? <ExpandLess /> : <ExpandMore />}</IconButton>
         )}
       </MenuListItem>
       {children}
