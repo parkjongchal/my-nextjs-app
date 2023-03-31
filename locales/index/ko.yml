@@ -1,0 +1,638 @@
+title: Migo 통합 어드민
+# 메뉴 --------------------------------------------------------------------------------------
+nav:
+  me: 내 정보
+  sample: 샘플 화면
+  mypage:
+    menu: 마이페이지
+    view: 내 정보
+    edit: 내 정보 수정
+    password-change: 비밀번호 재설정
+  chat: 채팅
+  customers:
+    menu: 회원
+    list: 회원계정 관리
+    view: 회원 상세
+    log: 회원 상태 LOG
+  account:
+    menu: 관리자
+    supervisor:
+      list: 관리자계정 관리
+      new: 관리자계정 등록
+      view: 관리자계정 상세
+      edit: 관리자계정 수정
+    manager:
+      list: 매니저계정 관리
+      new: 매니저계정 등록
+      view: 매니저계정 상세
+      edit: 매니저계정 수정
+    office:
+      list: 관리사무소계정 관리
+      new: 관리사무소계정 등록
+      view: 관리사무소계정 상세
+      edit: 관리사무소계정 수정
+  apartments:
+    menu: 아파트단지
+    list: 아파트단지 관리
+    view: 아파트단지 상세
+    service-edit: 서비스설정 수정
+    display-edit: 전시설정 수정
+    requesters: 미진출단지신청 관리
+  base-area:
+    menu: 거점
+    list: 거점 관리
+    new: 거점 등록
+    view: 거점 상세
+    edit: 거점 수정
+    holiday-settings:
+      list: 거점휴일 설정
+      new: 거점휴일 등록
+  service:
+    menu: 서비스
+    category:
+      list: 표준 카테고리 관리
+    general:
+      list: 일반서비스 관리
+      new: 일반서비스 생성
+      view: 일반서비스 상세
+      edit: 일반서비스 수정
+    subscription:
+      list: 구독서비스 관리
+      new: 구독서비스 등록
+      view: 구독서비스 상세
+      edit: 구독서비스 수정
+    subscription-group:
+      list: 구독서비스그룹 관리
+      new: 구독서비스그룹 등록
+      view: 구독서비스그룹 상세
+      edit: 구독서비스그룹 수정
+    shops:
+      list: 상점 관리
+      new: 상점정보 등록
+      view: 상점 상세
+      edit: 상점정보 수정
+      product:
+        new: 상품정보 등록
+        view: 상품정보 상세
+        edit: 상품정보 수정
+  display:
+    menu: 전시 관리
+    app-menu:
+      list: 앱 메뉴 관리
+      new: 앱 메뉴 등록
+      view: 앱 메뉴 상세
+      edit: 앱 메뉴 수정
+      tab-menu:
+        new: 탭 메뉴 등록
+        edit: 탭 메뉴 수정
+    banner:
+      list: 메인 배너 관리
+      new: 메인 배너 등록
+      view: 메인 배너 상세
+      edit: 메인 배너 수정
+    display-subscription:
+      list: 메인 전시 구독 서비스 관리
+      new: 메인 전시 구독 서비스 등록
+      edit: 메인 전시 구독 서비스 수정
+      view: 메인 전시 구독 서비스 상세
+    popular-store:
+      list: 메인 인기상점 관리
+      new: 메인 인기상점 등록
+      view: 메인 인기상점 상세
+      edit: 메인 인기상점 수정
+    main-service:
+      list: 메인 서비스소개 배너 관리
+      view: 메인 서비스소개 배너 상세
+      new: 메인 서비스소개 배너 등록
+      edit: 메인 서비스소개 배너 수정
+    pop-up:
+      list: 메인 팝업 관리
+      new: 메인 팝업 등록
+      view: 메인 팝업 상세
+      edit: 메인 팝업 수정
+  marketing:
+    menu: 마케팅
+    subscription-promotion:
+      list: 구독 프로모션 관리
+      new: 구독 프로모션 등록
+      view: 구독 프로모션 상세
+      edit: 구독 프로모션 수정
+    coupon:
+      list: 쿠폰 관리
+      new: 쿠폰 등록
+      view: 쿠폰 상세
+      issue: 쿠폰 발급
+      edit: 쿠폰 수정
+    coupon-history:
+      list: 쿠폰 발급내역
+      view: 쿠폰 발급내역 상세
+    dynamiclink:
+      list: 링크 조회
+    neighborhood:
+      list: 이웃초대 현황
+      view: 이웃초대 현황 상세
+    event:
+      list: 이벤트 관리
+      new: 이벤트 등록
+      view: 이벤트 상세
+      edit: 이벤트 수정
+    app-push:
+      list: 앱푸시 관리
+      new: 앱푸시 등록
+      view: 앱푸시 상세
+      edit: 앱푸시 수정
+  order:
+    menu: 주문
+    normal-order:
+      list: 일반 주문 조회
+      view: 일반 주문 상세
+    subscription-order:
+      list: 구독 주문 조회
+      view: 구독 주문 상세
+    subscription-task:
+      list: 구독 태스크 관리
+      view: 구독 태스크 상세
+  sales:
+    menu: 매출
+    sales-history:
+      menu: 매출내역
+  service-center:
+    menu: 고객센터
+    notice:
+      list: 공지사항 관리
+      view: 공지사항 상세
+      edit: 공지사항 수정
+      new: 공지사항 등록
+    inquiry:
+      menu: 1:1 문의
+      list: 1:1 문의내역
+      view: 1:1 문의내역 상세
+    faq:
+      list: FAQ 관리
+      view: FAQ 상세
+      new: FAQ 등록
+      edit: FAQ 수정
+  management-offices:
+    list: 관리사무소 관리
+    view: 관리사무소 상세
+# 공통 --------------------------------------------------------------------------------------
+common:
+  home: 홈
+  register_info: 등록 정보
+  basic_info: 기본 정보
+  edit_info: 수정 정보
+  close: 닫기
+  confirm: 확인
+  change: 변경
+  reset: 초기화
+  keyword: 키워드
+  period: 기간
+  today: 오늘
+  seven_day: 7일
+  thirty_day: 30일
+  ninety_day: 90일
+  one_hundred_eighty_day: 180일
+  search: 검색
+  add: 등록
+  delete: 삭제
+  completed: 완료
+  cancel: 취소
+  name: 이름
+  phoneNumber: 전화번호
+  email: 이메일
+  accountCode: 회원코드
+  userName: 사용자명
+  authority: 권한
+  edit: 수정
+  total_size: '{{size}}건'
+  total_user: '{{user}}명'
+  total_count: '{{count}}개'
+  total_days: '{{number}}일'
+  total_times: '{{count}}회'
+  csv_save: csv 저장
+  api_message: 요청이 완료되었습니다.
+  selection: 선택
+  select: 선택하기
+  select_success: 선택됨
+  view: 보기
+  copy: 복사
+  placeholder_text: 텍스트를 입력해주세요.
+  mon: 월
+  tue: 화
+  wed: 수
+  thu: 목
+  fri: 금
+  sat: 토
+  sun: 일
+  day: '{{key}}요일'
+  monday: 월요일
+  tuesday: 화요일
+  wednesday: 수요일
+  thursday: 목요일
+  friday: 금요일
+  saturday: 토요일
+  sunday: 일요일
+  number_of_weeks: '{{number}}주'
+  times_per_week: '{{number}}회 / 1주'
+  all: 전체
+  yes: Y
+  no: N
+  address: 주소
+  create_datetime: 등록일
+  total_price: '{{price}}원'
+  large_category: 대분류
+  medium_category: 중분류
+  small_category: 소분류
+  sub_category: 세분류
+  back: 이전
+  next: 다음
+  confirm_title: 알림
+  start_date: 시작일
+  end_date: 종료일
+  start_time: 시작 시간
+  end_time: 종료 시간
+  confirm_deletion_message: 정말로 삭제하시겠습니까?
+  confirm_cancellation_message: 정말로 취소하시겠습니까?
+  upload: 이미지 업로드
+  image_guide: '· 이미지 가이드 : 1280px * 1280px / 5Mb 이하 / gif, jpg(jpeg), png 형식'
+  and_count_more: '외 {{count}}곳'
+  exist: 있음
+  not_exist: 없음
+  from_date: '{{from}} 부터'
+  to_date: '{{to}} 까지'
+  period_date: '{{from}} ~ {{to}}'
+  priority_change: 정렬순서 변경
+  save: 저장
+  order: 주문
+  unit:
+    count: 회
+    week: 주
+    won: 원
+    count_per_week: 회 / 1주
+    round: 회차
+  columns:
+    id: 번호
+    admin_code: 관리자 코드
+    login_id: 아이디
+    name: 사용자 명
+    email: 이메일
+    role_id: 유형
+    last_login_datetime: 최근 접속일
+    kapt_code: 아파트 ID
+    kapt_name: 아파트명
+    kapt_addr: 주소
+    recycle_day_of_week_list: 재활용서비스가능요일
+    migo_serviced: 진출여부
+    kapt_da_cnt: 입주민수
+    applicant_cnt: 신청자수
+    displayed: 전시여부
+    base_area_id: 거점 ID
+    base_area_name: 거점명
+    in_service: 진출 여부
+    work_record_type_code: 항목
+    start_datetime: 시작 시간
+    end_datetime: 종료 시간
+    comment: 사유
+    date: 일자
+    waiting_count: 대기 건수
+    ongoing_count: 진행 건수
+    canceled_count: 취소 건수
+    completed_count: 완료 건수
+    total_count: 전체 건수
+    function: 관리 기능
+    category_name: 표준 카테고리
+    service_amount_unit_price: 1회당 서비스 금액
+    subscription_service_type: 서비스 유형
+    last_update_datetime: 최종 수정일
+    display_code: 전시코드
+    popular_store_name: 인기상점명명
+    store_name: 상점명
+    display_term: 전시기간
+    priority: 우선순위
+    service_introduction_name: 서비스소개명
+    display_start_datetime: 전시시작일
+    display_end_datetime: 전시종료일
+    display: 전시 여부
+    card_code: 카드사
+    card_number: 카드 번호
+    create_datetime: 등록일
+    last_modified_datetime: 최근 수정일
+    display_subscription_name: 전시 구독 서비스명
+    subscription_task_id: 구독 태스크 번호
+    subscription_id: 구독 번호
+    subscription_name: 구독 서비스명
+    user_id: 회원 번호
+    dong: 동
+    ho: 호
+    manager_name: 매니저
+    final_payment_price: 최종 결제 금액
+    service_offer_datetime: 서비스 제공 일시
+    task_status_code: 태스크 상태
+    service_code: 서비스 코드
+    subscription_description: 구독 서비스 설명
+    title: 제목
+    update_datetime: 최종수정일
+    faq_type_code: FAQ유형
+    user_code: 회원코드
+    phone_number: 휴대폰번호
+    invite_count: 초대한 회원 수
+    invite_user_code: 초대받은 회원코드
+    invite_phone_number: 초대받은 회원 휴대폰번호
+    invite_item_id: 이웃초대 번호
+    round: 구독회차
+    payment_price: 결제금액
+    payment_status: 결제상태
+    payment_datetime: 결제일자
+    payment_method: 결제수단
+    business_item: 종목
+    adult_certificated: 성인인증 여부
+    deleted: 삭제여부
+    marketing_agreed: 마케팅 동의
+    push_agreed: 푸시동의
+    dong_ho: 동호
+    holiday_name: 휴일명
+    holiday_datetime: 휴일날짜
+    confirmed: 인증여부
+    main_address: 우리집
+    resident_info: 입주민정보
+    category: 카테고리
+    service_name: 서비스명
+    status: 상태
+    history_detail: 내역 상세
+    service_day: 서비스 제공 요일
+    schedule_id: 구독 스케줄 ID
+    task_due: 태스크 수행일
+    task_name: 태스크명
+    task_time: 태스크 제공 시간
+    subscription_group_id: 구독서비스그룹ID
+    subscription_group_name: 구독서비스그룹명
+    related_apt_count: 연결 아파트 수
+    related_store_count: 연결 상점 수
+    related_service_count: 연결 서비스 수
+    days_in_service: 운영 요일
+    related_base_area_name: 연결 거점
+    related_use_count: 등록된 회원 수
+    price: 가격
+  filters:
+    name: 이름
+    last_login_date: 최근 접속일
+    role_id: 유형
+    login_id: 로그인 아이디
+# 에러메세지 ----------------------------------------------------------------------------------
+error:
+  login: 로그인에 문제가 발생했습니다.
+  id_required: 아이디를 입력해주세요.
+  id_taken: 이미 존재하는 아이디입니다.
+  pw_required: 비밀번호를 입력해주세요.
+  name_required: 이름을 입력해주세요.
+  number_required: 휴대폰 번호를 입력해주세요.
+  task_required: 담당 업무를 입력해주세요.
+  codeRequired: 인증번호를 입력해주세요.
+  is_required: 필수 입력 항목입니다.
+  invalid_input: 유효하지 않은 입력값입니다.
+  id_not_tested: 중복 체크를 해주세요.
+  login_fail: 로그인 5회 실패하셨어요.
+  no_access_token: 로그인이 불가능한 상태입니다. 관리자에게 문의해주세요.
+  inconsistency: 입력된 정보가 일치하지 않습니다.
+  password_inconsistency: 기존 비밀번호와 동일합니다.
+  current_password_inconsistency: 현재 비밀번호가 맞지 않습니다.
+  new_password_inconsistency: 새 비밀번호 확인이 일치하지 않습니다.
+  api_default: 에러가 발생했습니다.
+  reconfirm_id_name_num: 입력하신 정보가 검색되지 않습니다. 아이디/이름/휴대폰번호 정보를 재확인해주세요.
+  reconfirm_name_num: 입력하신 정보가 검색되지 않습니다. 이름/휴대폰번호 정보를 재확인해주세요.
+  inconsistency_code: 인증번호가 일치하지 않습니다.
+  re_enter_code: 인증번호와 다르게 입력되었어요. 재입력해주세요.
+  registration_fail: 등록 실패
+  select_required: 선택한 항목이 없어 삭제할 수 없습니다.
+  base_area_name_required: 거점명을 입력해주세요.
+  base_area_time_text_required: 운영시간 표기 문구를 입력해주세요.
+  add_category_limit: 카테고리는 최대 4단계까지만 설정 가능합니다.
+  display_apartment_code_required: 노출단지를 추가해주세요.
+  banner_name_required: 배너명을 입력해주세요.
+  pop_up_name_required: 팝업명을 입력해주세요.
+  landing_url_required: 랜딩URL을 입력해주세요.
+  store_name_required: 상점명을 입력해주세요.
+  main_service_name_required: 서비스소개명을 입력해주세요.
+  order_manager_base_area_inconsistency: 담당자 변경은 같은 거점인 주문 건만 한번에 가능합니다.
+  subscription_promotion_name_required: 프로모션명을 입력해주세요.
+  subscription_service_name_required: 구독서비스를 선택해주세요.
+  subscription_memo: 100자를 초과할 수 없습니다.
+  round_required: 회차를 입력해주세요.
+  round_name_required: 회차명을 입력해주세요.
+  event_price_required: 이벤트 가격을 입력해주세요.
+  no_data: 등록된 정보가 없습니다.
+  pw_current_required: 기존 비밀번호를 입력해주세요.
+  pw_new_required: 새 비밀번호를 입력해주세요.
+  pw_confirm_required: 새 비밀번호 확인을 입력해주세요.
+  end_date_before_start_date: 종료일은 시작일보다 이를 수 없습니다.
+  image_size_alert: 이미지는 5Mb 이하만 업로드 가능합니다.
+  numbers_only: 숫자만 입력 가능합니다.
+  min_out_of_range: '최소 {{min}} 이상의 숫자를 입력해주세요.'
+  max_out_of_range: '최대 {{max}} 이하의 숫자를 입력해주세요.'
+  number_out_of_range: '{{min}}~{{max}} 범위 내 숫자를 입력해주세요.'
+  string_out_of_maxLength: '최대 {{maxLength}}자 이내로 입력해주세요.'
+  invalid_url: 랜딩 유형과 일치하지 않거나 유효하지 않은 URL입니다.
+  url_not_tested: URL 확인 버튼을 눌러주세요.
+  over_time: 현재 일시 이후의 날짜 시간 정보를 입력해주세요.
+
+placeholder:
+  id: 영문, 숫자 조합 (6~13자)
+  name: 한글, 영문 조합 (1~13자)
+  phone_number: 숫자 (11자)
+  selection: 선택해주세요
+
+helperText:
+  validId: 사용 가능한 아이디입니다.
+  validUrl: 유효한 URL입니다.
+# Enum ----------------------------------------------------------------------------------
+enums:
+  common:
+    no_value: '-'
+  account:
+    role_id:
+      1: 비회원
+      2: 준회원
+      3: 일반 회원
+      4: 일반 관리자
+      5: 최고 관리자
+      6: 일반 매니저
+      7: 헤드 매니저
+      8: 관리사무소 일반 관리자
+      9: 관리사무소 최고 관리자
+    work_record_type_code:
+      '01': 출근
+      '02': 퇴근
+      '03': 자동배정
+      '04': 휴식
+  customers:
+    customer_type_code:
+      '01': 일반 회원
+      '02': 휴면 회원
+      '03': 탈퇴 회원
+    customer_status_code:
+      '01': 정상
+      '02': 자격 정지
+      '03': 휴면
+      '04': 일반 탈퇴
+      '05': 강제 탈퇴
+      '06': 직권 탈퇴
+    customer_status_change_reason_code:
+      A01: 자격정지 해제
+      A02: 휴면 해제
+      A03: 탈퇴 복구
+      A99: 기타
+      B01: 가입신청 시 허위내용을 등록한 경우
+      B02: 타인의 개인정보를 도용한 경우
+      B03: 서비스 운영을 고의로 방해한 경우
+      B04: 부정/부당 이익 취득한 경우 (포인트, 스탬프 등)
+      B99: 기타
+      C01: 단순 변심
+      C02: 서비스 이용 불만
+      C99: 기타
+      D01: 시스템 혼선 조장
+      D02: 영업 방해
+      D99: 기타
+    card_type_code:
+      '01': 개인
+      '02': 법인
+    inquiry_type_code:
+      '01': 서비스 이용
+      '02': 시스템 오류
+      '03': 이벤트
+      '04': 회원정보
+      '05': 상점(메뉴) 추가요청
+      '06': 로그인 문제 해결
+      '07': 제휴
+      '08': 정기구독
+      '09': 개선/제안
+      '99': 기타
+    payment_method_code:
+      '01': 카드 간편결제
+      '02': 만나서 결제
+  service:
+    migo_service_type_code:
+      '01': 상점연결
+      '02': 직접수행
+    shops:
+      regular_holiday_week_code:
+        '01': 매주
+        '02': 매월 첫째주
+        '03': 매월 둘째주
+        '04': 매월 셋째주
+        '05': 매월 넷째주
+      product_list_type:
+        all: 전체 메뉴
+        main: 대표 메뉴
+        menu_category: 메뉴 카테고리 상품
+  order:
+    task_status_code:
+      '01': 주문요청
+      '02': 주문접수
+      '03': 수락
+      '04': 처리중
+      '05': 결제중
+      '06': 결제실패
+      '07': 완료
+      '08': 취소
+    payment_method_code:
+      '01': 카드 간편결제
+      '02': 만나서 결제
+    payment_status_code:
+      '01': 결제요청
+      '02': 결제완료
+      '03': 결제실패
+      '04': 결제취소
+    normal_order:
+      request_time_type:
+        right_now: 지금 바로
+        on_today: 오늘 중에
+        in_3_hours: 3시간 안에
+        select_time_preset: 시간 선택
+    subscription_order:
+      subscription_status:
+        subscribing: 구독 중
+        subscription_end: 구독 종료
+        subscription_payment_failed: 결제 실패
+        subscription_will_end: 구독 종료 예정
+    subscription_task:
+      manager_task_comment_code:
+        '01': 지원 요청
+        '02': 지원 수락
+  marketing:
+    coupon:
+      discount_type_code:
+        all: 전체 할인
+        service_price: 서비스 팁 할인
+      coupon_type_code:
+        general: 일반
+        first_sign_up: 최초가입
+        recommender: 이웃추천(추천하는자)
+        recommended_user: 이웃추천(추천받는자)
+        reward: 신청시간 리워드
+        first_add_address: 최초 주소등록
+      expire_type:
+        fix_duration: 기간설정
+        from_issuance_date: 쿠폰발급일 기준
+      coupon_target:
+        all: 일반서비스 전체
+        general_service: 일반서비스
+        store: 상점
+        subscription_service: 구독서비스
+    dynamiclink:
+      'STORES': 앱 메뉴명
+      'STORE': 상점 상세
+      'SUBSCRIPTIONS': 구독 리스트
+      'SUBSCRIPTION': 구독 상세
+      'EVENT': 이벤트
+    subscription_promotion:
+      display:
+        true: 진행 중
+        false: 진행 안 함
+    event:
+      event_display_type_code:
+        all: 전체
+        base_area: 거점
+        apartment: 아파트
+      progress_status_code:
+        will_start: 진행예정
+        in_progress: 진행중
+        end: 진행종료
+      landing_type:
+        none: 랜딩 없음
+        in: 앱 내 페이지 랜딩
+        out: 외부 브라우저로 랜딩
+      event_type:
+        information_transfer: 정보 전달형 이벤트
+        before_request: 사전 신청형 이벤트 (TBD)
+    app_push:
+      app_push_type:
+        advertisement: 광고성
+        information: 정보성
+      app_push_status:
+        stand_by: 발송 대기
+        in_progress: 발송 중
+        complete: 발송 완료
+        cancel: 발송 취소
+      landing_type:
+        internal: 앱 내 페이지 랜딩
+        external: 외부 브라우저로 랜딩
+      app_push_send_target_type:
+        all: 전체 회원
+        base_area: 거점
+        apartment: 아파트 단지
+        specific_user: 특정 회원
+        excel: 엑셀 업로드
+        no_change: 변경 없음
+      app_push_send_status:
+        stand_by: 대기
+        success: 성공
+        fail: 실패
+  service_center:
+    faq:
+      faq_type_code:
+        '01': 주문/결제/취소
+        '02': 서비스 이용
+    notice:
+      display_apartment_type_code:
+        '01': 전체
+        '02': 개별

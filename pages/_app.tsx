@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
-import {AppProps} from 'next/app';
+import App, {AppContext, AppProps} from 'next/app';
 import {ThemeProvider} from '@mui/material/styles';
 import {CacheProvider, EmotionCache} from '@emotion/react';
 import theme from '../styles/theme';
@@ -9,6 +9,8 @@ import Layout from '@/components/layout/Layout';
 import {SessionProvider} from 'next-auth/react';
 import client from '../apollo_client';
 import {ApolloProvider} from '@apollo/client';
+import {I18nProvider} from 'next-localization';
+import {defaultLanguage, getLocalesFromPages, localedPages} from '@/utils/i18n';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -30,16 +32,28 @@ const MyApp = ({
           <link rel="icon" href="/favicon.ico" />
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
-        <ThemeProvider theme={theme}>
-          <ApolloProvider client={client}>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </ApolloProvider>
-        </ThemeProvider>
+        <I18nProvider lngDict={pageProps.lngDict} locale={defaultLanguage}>
+          <ThemeProvider theme={theme}>
+            <ApolloProvider client={client}>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </ApolloProvider>
+          </ThemeProvider>
+        </I18nProvider>
       </CacheProvider>
     </SessionProvider>
   );
 };
 
+MyApp.getInitialProps = async (appContext: AppContext) => {
+  const appProps = await App.getInitialProps(appContext);
+  if (!appProps.pageProps.lngDict) {
+    appProps.pageProps.lngDict = await getLocalesFromPages(
+      defaultLanguage,
+      ...localedPages
+    );
+  }
+  return {...appProps};
+};
 export default MyApp;

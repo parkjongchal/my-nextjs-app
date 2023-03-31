@@ -18,6 +18,7 @@ import {
 import Title from '@/components/layout/Title';
 import {Delete, Edit} from '@mui/icons-material';
 import Image from 'next/image';
+import {useI18n} from 'next-localization';
 
 const HeadCell = styled(TableCell)(({theme}) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -27,9 +28,10 @@ const HeadCell = styled(TableCell)(({theme}) => ({
 
 const MePage: NextPage = () => {
   const theme = useTheme();
+  const i18n = useI18n();
   return (
     <Box>
-      <Title title="내 정보">
+      <Title title={i18n.t('nav.me')}>
         <Stack direction="row" spacing={1}>
           <IconButton size="medium" color="primary">
             <Edit />
