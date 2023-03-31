@@ -7,7 +7,7 @@ import apolloClient from '@/apollo_client';
 import {Box} from '@mui/material';
 import {OperationVariables} from '@apollo/client/core/types';
 
-const FETCH_COUPONS = gql`
+const FETCH_PROFILES = gql`
   query ($limit: Int, $offset: Int, $where: profiles_bool_exp) {
     profiles(
       limit: $limit
@@ -49,7 +49,7 @@ export async function getServerSideProps({query}: NextPageContext) {
   const where: OperationVariables = {};
 
   const {data} = await apolloClient.query<Data>({
-    query: FETCH_COUPONS,
+    query: FETCH_PROFILES,
     variables: {
       limit,
       offset,
